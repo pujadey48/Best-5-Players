@@ -101,7 +101,7 @@ document.getElementById("btn-calculate").addEventListener("click",function(){
         alert("please provide a valid input");
         return;
     }
-    const olLength = getOlLength();
+    const olLength = getOlLength(); //find size of selected players
     
         const playerExpenses = perPlayer * olLength;
         const totalExpenses = setTextElementById("total", playerExpenses);
