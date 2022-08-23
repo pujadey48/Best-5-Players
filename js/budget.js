@@ -1,11 +1,11 @@
-console.log("football");
-function orderdList(elementID){
+
+function orderdList(elementID, btnId){
     
-    const orderedListContainer = document.querySelector("ol");
-    let listNumber = orderedListContainer.querySelectorAll("li");
-    // console.log(listNumber.length);
-    let listLength = listNumber.length;
-    console.log(listLength);
+    // const orderedListContainer = document.querySelector("ol");
+    // let listNumber = orderedListContainer.querySelectorAll("li");
+    // let listLength = listNumber.length;
+    // // console.log(listLength);
+    const listLength = getOlLength();
     if(listLength<5){
         const playerNameField = document.getElementById(elementID);
         const playerName = playerNameField.innerText;
@@ -15,6 +15,7 @@ function orderdList(elementID){
         let entry = document.createElement('li');
         entry.innerText = playerName;
         list.appendChild(entry);
+        disabledFunction(btnId);
     }
     else{
         alert("can not add more");
@@ -25,7 +26,7 @@ function orderdList(elementID){
 function getOlLength(){
     const orderedListContainer = document.querySelector("ol");
     let listNumber = orderedListContainer.querySelectorAll("li");
-    // console.log(listNumber.length);
+    
     let listLength = listNumber.length;
     return listLength;
 }
@@ -51,7 +52,7 @@ function gettextvalue(elementID){
 
 }
 function disabledFunction(elementId) {
-    // document.getElementById(elementId).style="pointer-events: none;backgroundColor= 'gray';";
+    
     const selectBtn = document.getElementById(elementId);
     selectBtn.style.pointerEvents="none";
     selectBtn.style.backgroundColor= "gray";
@@ -70,34 +71,34 @@ window.onload = init;
 
 
 document.getElementById("select-btn1").addEventListener("click", function(){
-    orderdList("player-select1");
-    disabledFunction("select-btn1");
+    orderdList("player-select1","select-btn1");
+    // disabledFunction("select-btn1");
     
     
 })
 document.getElementById("select-btn2").addEventListener("click", function(){
-    orderdList("player-select2");
-    disabledFunction("select-btn2");
+    orderdList("player-select2","select-btn2");
+    // disabledFunction("select-btn2");
 })
 
 document.getElementById("select-btn3").addEventListener("click", function(){
-    orderdList("player-select3");
-    disabledFunction("select-btn3");
+    orderdList("player-select3","select-btn3");
+    // disabledFunction("select-btn3");
 })
 
 document.getElementById("select-btn4").addEventListener("click", function(){
-    orderdList("player-select4");
-    disabledFunction("select-btn4");
+    orderdList("player-select4","select-btn4");
+    // disabledFunction("select-btn4");
 })
 
 document.getElementById("select-btn5").addEventListener("click", function(){
-    orderdList("player-select5");
-    disabledFunction("select-btn5");
+    orderdList("player-select5","select-btn5");
+    // disabledFunction("select-btn5");
 })
 
 document.getElementById("select-btn6").addEventListener("click", function(){
-    orderdList("player-select6")
-    disabledFunction("select-btn6");
+    orderdList("player-select6","select-btn6");
+    // disabledFunction("select-btn6");
 })
 
 document.getElementById("btn-calculate").addEventListener("click",function(){
