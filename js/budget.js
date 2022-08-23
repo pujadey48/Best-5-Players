@@ -61,6 +61,17 @@ function disabledFunction(elementId) {
     selectBtn.style.backgroundColor= "gray";
 }
 
+function init() {
+    // Clear forms here
+    document.getElementById("input-per-player").value = "";
+    document.getElementById("manager-cost").value = "";
+    document.getElementById("coach-cost").value = "";
+    document.getElementById("total").innerText = "00";
+    document.getElementById("final-cost").innerText = "00";
+
+}
+window.onload = init;
+
 
 document.getElementById("player1-select").addEventListener("click", function(){
     orderdList("player-select1");
