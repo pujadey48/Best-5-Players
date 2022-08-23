@@ -15,10 +15,6 @@ function orderdList(elementID){
         let entry = document.createElement('li');
         entry.innerText = playerName;
         list.appendChild(entry);
-
-        // const selectBtn = document.getElementById("player1-select");
-        // selectBtn.setAttribute('disabled',true);
-        // selectBtn.style.backgroundColor= "gray";
     }
     else{
         alert("can not add more");
@@ -73,35 +69,35 @@ function init() {
 window.onload = init;
 
 
-document.getElementById("player1-select").addEventListener("click", function(){
+document.getElementById("select-btn1").addEventListener("click", function(){
     orderdList("player-select1");
-    disabledFunction("player1-select");
+    disabledFunction("select-btn1");
     
     
 })
-document.getElementById("player2-select").addEventListener("click", function(){
+document.getElementById("select-btn2").addEventListener("click", function(){
     orderdList("player-select2");
-    disabledFunction("player2-select");
+    disabledFunction("select-btn2");
 })
 
-document.getElementById("player3-select").addEventListener("click", function(){
+document.getElementById("select-btn3").addEventListener("click", function(){
     orderdList("player-select3");
-    disabledFunction("player3-select");
+    disabledFunction("select-btn3");
 })
 
-document.getElementById("player4-select").addEventListener("click", function(){
+document.getElementById("select-btn4").addEventListener("click", function(){
     orderdList("player-select4");
-    disabledFunction("player4-select");
+    disabledFunction("select-btn4");
 })
 
-document.getElementById("player5-select").addEventListener("click", function(){
+document.getElementById("select-btn5").addEventListener("click", function(){
     orderdList("player-select5");
-    disabledFunction("player5-select");
+    disabledFunction("select-btn5");
 })
 
-document.getElementById("player6-select").addEventListener("click", function(){
+document.getElementById("select-btn6").addEventListener("click", function(){
     orderdList("player-select6")
-    disabledFunction("player6-select");
+    disabledFunction("select-btn6");
 })
 
 document.getElementById("btn-calculate").addEventListener("click",function(){
@@ -117,7 +113,7 @@ document.getElementById("btn-calculate").addEventListener("click",function(){
         const totalExpenses = setTextElementById("total", playerExpenses);
     }
     else{
-        alert("invalid");
+        alert("you have to add five players.");
     }
     
     
