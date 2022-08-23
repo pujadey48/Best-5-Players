@@ -54,33 +54,43 @@ function gettextvalue(elementID){
     return textFieldValue;
 
 }
+function disabledFunction(elementId) {
+    // document.getElementById(elementId).style="pointer-events: none;backgroundColor= 'gray';";
+    const selectBtn = document.getElementById(elementId);
+    selectBtn.style.pointerEvents="none";
+    selectBtn.style.backgroundColor= "gray";
+}
 
 
 document.getElementById("player1-select").addEventListener("click", function(){
     orderdList("player-select1");
-    // disabledFunction("player1-select");
+    disabledFunction("player1-select");
     
     
 })
 document.getElementById("player2-select").addEventListener("click", function(){
-    orderdList("player-select2")
-    // disabledFunction("player2-select");
+    orderdList("player-select2");
+    disabledFunction("player2-select");
 })
 
 document.getElementById("player3-select").addEventListener("click", function(){
-    orderdList("player-select3")
+    orderdList("player-select3");
+    disabledFunction("player3-select");
 })
 
 document.getElementById("player4-select").addEventListener("click", function(){
-    orderdList("player-select4")
+    orderdList("player-select4");
+    disabledFunction("player4-select");
 })
 
 document.getElementById("player5-select").addEventListener("click", function(){
-    orderdList("player-select5")
+    orderdList("player-select5");
+    disabledFunction("player5-select");
 })
 
 document.getElementById("player6-select").addEventListener("click", function(){
     orderdList("player-select6")
+    disabledFunction("player6-select");
 })
 
 document.getElementById("btn-calculate").addEventListener("click",function(){
@@ -89,7 +99,7 @@ document.getElementById("btn-calculate").addEventListener("click",function(){
         alert("please provide a valid input");
         return;
     }
-    const olLength = getO();
+    const olLength = getOlLength();
     
     if(olLength==5){
         const playerExpenses = perPlayer * olLength;
